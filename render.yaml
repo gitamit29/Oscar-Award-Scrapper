@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: oscar-scraper
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python oscar_scraper.py"
+    envVars:
+      - key: FLASK_ENV
+        value: production
+    plan: free
