@@ -1,7 +1,3 @@
-Here’s a professional and clear **README.md** content you can use for your Oscar Award-winning film scraper project:
-
----
-
 #  Oscar Award-Winning Films Scraper
 
 This project is a web scraper built using **Python** and **BeautifulSoup** to extract data on Oscar award-winning films from a target website. The data includes film titles, categories, award years, and whether the film won or was nominated.
