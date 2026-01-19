@@ -134,7 +134,14 @@ def index():
     if request.method == 'POST':
         url = request.form.get('url')
         try:
-            req = requests.get(url)
+            headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/120.0.0.0 Safari/537.36"
+}
+
+            req = requests.get(url, headers=headers, timeout=15)
+
             req.raise_for_status()
             soup = BeautifulSoup(req.content, 'html.parser')
 
@@ -218,3 +225,4 @@ def download_pdf():
 if __name__ == '__main__':
     from werkzeug.serving import run_simple
     run_simple('127.0.0.1', 5000, app, use_reloader=False)
+
